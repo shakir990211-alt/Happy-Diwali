@@ -9,35 +9,37 @@
 <style>body{font-family:'Inter',sans-serif;}</style>
 </head>
 <body class="bg-white text-black">
+
 <header class="sticky top-0 z-40 bg-white border-b">
   <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
     <button onclick="openMenu()" class="md:hidden">☰</button>
-    <a href="index.html" class="font-black text-2xl tracking-tight">ZAYRO<span class="font-light">STORE</span></a>
+    <a href="#home" class="font-black text-2xl tracking-tight">ZAYRO<span class="font-light">STORE</span></a>
     <nav class="hidden md:flex gap-6 text-sm font-medium">
-      <a href="shop.html">Shop</a><a href="shop.html?cat=new">New Arrivals</a><a href="shop.html?cat=men">Men</a><a href="shop.html?cat=women">Women</a><a href="about.html">About</a>
+      <a href="#shop">Shop</a><a href="#shop?cat=new">New Arrivals</a><a href="#shop?cat=men">Men</a><a href="#shop?cat=women">Women</a><a href="#about">About</a>
     </nav>
     <div class="flex items-center gap-4">
-      <a href="wishlist.html">♡<span id="wish-count" class="ml-1 text-xs">0</span></a>
-      <a href="cart.html">🛒<span id="cart-count" class="ml-1 text-xs">0</span></a>
-      <a href="account.html">👤</a>
+      <a href="#wishlist">♡<span id="wish-count" class="ml-1 text-xs">0</span></a>
+      <a href="#cart">🛒<span id="cart-count" class="ml-1 text-xs">0</span></a>
+      <a href="#account">👤</a>
     </div>
   </div>
 </header>
+
 <div id="menu-overlay" class="hidden fixed inset-0 bg-black/50 z-50" onclick="closeMenu()"></div>
 <aside id="mobile-menu" class="fixed top-0 left-0 h-full w-80 bg-white z-50 -translate-x-full transition-transform duration-300 overflow-y-auto">
   <div class="p-4 flex justify-between items-center border-b"><span class="font-black text-xl">ZAYRO<span class="font-light">STORE</span></span><button onclick="closeMenu()">✕</button></div>
   <div class="p-4"><input class="w-full border rounded px-3 py-2" placeholder="Search..."></div>
   <nav class="flex flex-col p-4 gap-3 text-sm">
-    <a href="shop.html">Shop</a><a href="shop.html?cat=new">New Arrivals</a><a href="shop.html?cat=men">Men</a><a href="shop.html?cat=women">Women</a><a href="account.html">My Account</a><a href="cart.html">Cart</a><a href="wishlist.html">Wishlist</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="faq.html">FAQ</a>
+    <a href="#shop">Shop</a><a href="#shop?cat=new">New Arrivals</a><a href="#shop?cat=men">Men</a><a href="#shop?cat=women">Women</a><a href="#account">My Account</a><a href="#cart">Cart</a><a href="#wishlist">Wishlist</a><a href="#about">About</a><a href="#contact">Contact</a><a href="#faq">FAQ</a>
   </nav>
   <div class="sticky bottom-0 p-4 bg-white border-t"><a href="https://wa.me/1234567890" class="block text-center bg-green-500 text-white py-2 rounded">WhatsApp</a></div>
 </aside>
 
-<main>
+<section id="home">
 <section class="bg-[#F5F5F7] py-24 text-center">
   <h1 class="text-5xl md:text-7xl font-black mb-4">Wear The Future</h1>
   <p class="text-gray-600 mb-8">Premium noir essentials for the modern wardrobe.</p>
-  <a href="shop.html" class="inline-block bg-black text-[#D4FF00] px-8 py-3 font-bold rounded">Shop Now</a>
+  <a href="#shop" class="inline-block bg-black text-[#D4FF00] px-8 py-3 font-bold rounded">Shop Now</a>
 </section>
 <section class="max-w-7xl mx-auto px-4 py-16">
   <h2 class="text-2xl font-bold mb-8">Featured Categories</h2>
@@ -58,16 +60,198 @@
     <button class="bg-[#D4FF00] text-black px-6 py-2 font-bold rounded">Subscribe</button>
   </form>
 </section>
-</main>
+</section>
 
 <footer class="bg-black text-white py-12">
   <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 text-sm">
     <div><h3 class="font-bold mb-3">ZAYROSTORE</h3><p class="text-gray-400">Wear The Future.</p></div>
-    <div><h3 class="font-bold mb-3">Shop</h3><ul class="space-y-2 text-gray-400"><li><a href="shop.html">All</a></li><li><a href="shop.html?cat=men">Men</a></li><li><a href="shop.html?cat=women">Women</a></li></ul></div>
-    <div><h3 class="font-bold mb-3">Support</h3><ul class="space-y-2 text-gray-400"><li><a href="contact.html">Contact</a></li><li><a href="faq.html">FAQ</a></li><li><a href="about.html">About</a></li></ul></div>
+    <div><h3 class="font-bold mb-3">Shop</h3><ul class="space-y-2 text-gray-400"><li><a href="#shop">All</a></li><li><a href="#shop?cat=men">Men</a></li><li><a href="#shop?cat=women">Women</a></li></ul></div>
+    <div><h3 class="font-bold mb-3">Support</h3><ul class="space-y-2 text-gray-400"><li><a href="#contact">Contact</a></li><li><a href="#faq">FAQ</a></li><li><a href="#about">About</a></li></ul></div>
     <div><h3 class="font-bold mb-3">Follow</h3><ul class="space-y-2 text-gray-400"><li>Instagram</li><li>Twitter</li><li>TikTok</li></ul></div>
   </div>
 </footer>
+
+<section id="shop">
+<header class="sticky top-0 z-40 bg-white border-b"><div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between"><button onclick="openMenu()" class="md:hidden">☰</button><a href="#home" class="font-black text-2xl">ZAYRO<span class="font-light">STORE</span></a><nav class="hidden md:flex gap-6 text-sm font-medium"><a href="#shop">Shop</a><a href="#shop">New Arrivals</a><a href="#shop">Men</a><a href="#shop">Women</a><a href="#about">About</a></nav><div class="flex items-center gap-4"><a href="#wishlist">♡<span id="wish-count" class="ml-1 text-xs">0</span></a><a href="#cart">🛒<span id="cart-count" class="ml-1 text-xs">0</span></a><a href="#account">👤</a></div></div></header>
+<div id="menu-overlay" class="hidden fixed inset-0 bg-black/50 z-50" onclick="closeMenu()"></div>
+<aside id="mobile-menu" class="fixed top-0 left-0 h-full w-80 bg-white z-50 -translate-x-full transition-transform duration-300 overflow-y-auto"><div class="p-4 flex justify-between items-center border-b"><span class="font-black text-xl">ZAYRO<span class="font-light">STORE</span></span><button onclick="closeMenu()">✕</button></div><div class="p-4"><input class="w-full border rounded px-3 py-2" placeholder="Search..."></div><nav class="flex flex-col p-4 gap-3 text-sm"><a href="#shop">Shop</a><a href="#home">Home</a><a href="#account">My Account</a><a href="#cart">Cart</a><a href="#wishlist">Wishlist</a><a href="#about">About</a><a href="#contact">Contact</a><a href="#faq">FAQ</a></nav><div class="sticky bottom-0 p-4 bg-white border-t"><a href="https://wa.me/1234567890" class="block text-center bg-green-500 text-white py-2 rounded">WhatsApp</a></div></aside>
+<main class="max-w-7xl mx-auto px-4 py-8 grid md:grid-cols-4 gap-8">
+<aside class="md:sticky md:top-20 self-start space-y-6">
+  <div><h3 class="font-bold mb-2">Price</h3><input type="range" min="0" max="200" class="w-full"></div>
+  <div><h3 class="font-bold mb-2">Category</h3><label class="block"><input type="checkbox"> Men</label><label class="block"><input type="checkbox"> Women</label><label class="block"><input type="checkbox"> New</label></div>
+  <div><h3 class="font-bold mb-2">Color</h3><div class="flex gap-2"><span class="w-6 h-6 rounded-full bg-black"></span><span class="w-6 h-6 rounded-full bg-white border"></span><span class="w-6 h-6 rounded-full bg-gray-500"></span></div></div>
+  <div><h3 class="font-bold mb-2">Size</h3><div class="flex gap-2 flex-wrap"><button class="border px-2 py-1">S</button><button class="border px-2 py-1">M</button><button class="border px-2 py-1">L</button><button class="border px-2 py-1">XL</button></div></div>
+</aside>
+<section class="md:col-span-3">
+  <div class="flex justify-between items-center mb-6"><h1 class="text-2xl font-bold">Shop</h1><select id="sort" class="border px-3 py-2 rounded"><option>Sort by</option><option>Price Low-High</option><option>Price High-Low</option></select></div>
+  <div id="grid" class="grid grid-cols-2 md:grid-cols-3 gap-6"></div>
+</section>
+</main>
+<footer class="bg-black text-white py-12 mt-16"><div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 text-sm"><div><h3 class="font-bold mb-3">ZAYROSTORE</h3><p class="text-gray-400">Wear The Future.</p></div><div><h3 class="font-bold mb-3">Shop</h3><ul class="space-y-2 text-gray-400"><li><a href="#shop">All</a></li></ul></div><div><h3 class="font-bold mb-3">Support</h3><ul class="space-y-2 text-gray-400"><li><a href="#contact">Contact</a></li><li><a href="#faq">FAQ</a></li></ul></div><div><h3 class="font-bold mb-3">Follow</h3><ul class="space-y-2 text-gray-400"><li>Instagram</li></ul></div></div></footer>
+<script>
+const prods = Array.from({length:12},(_,i)=>({id:100+i,name:'Product '+(i+1),price:40+i*15,img:'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&q='+(i)}));
+const grid=document.getElementById('grid');
+function render(list){grid.innerHTML=list.map(p=>`<div class="group"><img src="${p.img}" class="w-full h-64 object-cover rounded mb-3"><h3 class="font-semibold">${p.name}</h3><p class="text-gray-600">$${p.price}</p><button onclick='addToCart({id:${p.id},name:"${p.name}",price:${p.price},img:"${p.img}"})' class="mt-2 w-full border border-black py-2 hover:bg-black hover:text-white transition">Add to Cart</button></div>`).join('');}
+render(prods);
+document.getElementById('sort').addEventListener('change',e=>{
+  let s=[...prods];
+  if(e.target.value==='Price Low-High') s.sort((a,b)=>a.price-b.price);
+  if(e.target.value==='Price High-Low') s.sort((a,b)=>b.price-a.price);
+  render(s);
+});
+</script>
+</section>
+
+<section id="product">
+<header class="sticky top-0 z-40 bg-white border-b"><div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between"><button onclick="openMenu()" class="md:hidden">☰</button><a href="#home" class="font-black text-2xl">ZAYRO<span class="font-light">STORE</span></a><nav class="hidden md:flex gap-6 text-sm font-medium"><a href="#shop">Shop</a><a href="#shop">New Arrivals</a><a href="#shop">Men</a><a href="#shop">Women</a><a href="#about">About</a></nav><div class="flex items-center gap-4"><a href="#wishlist">♡<span id="wish-count" class="ml-1 text-xs">0</span></a><a href="#cart">🛒<span id="cart-count" class="ml-1 text-xs">0</span></a><a href="#account">👤</a></div></div></header>
+<div id="menu-overlay" class="hidden fixed inset-0 bg-black/50 z-50" onclick="closeMenu()"></div>
+<aside id="mobile-menu" class="fixed top-0 left-0 h-full w-80 bg-white z-50 -translate-x-full transition-transform duration-300 overflow-y-auto"><div class="p-4 flex justify-between items-center border-b"><span class="font-black text-xl">ZAYRO<span class="font-light">STORE</span></span><button onclick="closeMenu()">✕</button></div><nav class="flex flex-col p-4 gap-3 text-sm"><a href="#shop">Shop</a><a href="#home">Home</a><a href="#account">My Account</a><a href="#cart">Cart</a><a href="#wishlist">Wishlist</a><a href="#about">About</a><a href="#contact">Contact</a><a href="#faq">FAQ</a></nav><div class="sticky bottom-0 p-4 bg-white border-t"><a href="https://wa.me/1234567890" class="block text-center bg-green-500 text-white py-2 rounded">WhatsApp</a></div></aside>
+<main class="max-w-7xl mx-auto px-4 py-8 grid md:grid-cols-2 gap-10">
+<div>
+  <img id="mainImg" src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600" class="w-full rounded mb-4">
+  <div class="flex gap-3">
+    <img onclick="document.getElementById('mainImg').src=this.src" src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=200" class="w-20 h-20 object-cover rounded cursor-pointer border">
+    <img onclick="document.getElementById('mainImg').src=this.src" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=200" class="w-20 h-20 object-cover rounded cursor-pointer border">
+    <img onclick="document.getElementById('mainImg').src=this.src" src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=200" class="w-20 h-20 object-cover rounded cursor-pointer border">
+  </div>
+</div>
+<div>
+  <h1 class="text-3xl font-bold mb-2">Noir Hoodie</h1>
+  <p class="text-2xl font-semibold mb-4">$89</p>
+  <p class="text-yellow-500 mb-4">★★★★☆ (4.5)</p>
+  <div class="mb-4"><p class="font-semibold mb-2">Size</p><div class="flex gap-2"><button class="border px-4 py-2 hover:bg-black hover:text-white">S</button><button class="border px-4 py-2 hover:bg-black hover:text-white">M</button><button class="border px-4 py-2 hover:bg-black hover:text-white">L</button></div></div>
+  <div class="mb-6 flex items-center gap-3"><button onclick="qty=Math.max(1,qty-1);document.getElementById('q').textContent=qty" class="border px-3 py-1">-</button><span id="q">1</span><button onclick="qty++;document.getElementById('q').textContent=qty" class="border px-3 py-1">+</button></div>
+  <div class="flex gap-3 mb-6"><button onclick="addToCart({id:1,name:'Noir Hoodie',price:89,img:'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400',qty:qty})" class="flex-1 bg-black text-[#D4FF00] py-3 font-bold">Add to Cart</button><a href="#checkout" class="flex-1 text-center border border-black py-3 font-bold">Buy Now</a></div>
+  <div class="border-t pt-4"><div class="flex gap-4 mb-4"><button onclick="tab('desc')" class="font-semibold">Description</button><button onclick="tab('rev')" class="font-semibold">Reviews</button></div><div id="desc">Premium noir hoodie crafted from heavyweight cotton. Wear the future.</div><div id="rev" class="hidden">Great quality, fits perfectly.</div></div>
+</div>
+</main>
+<footer class="bg-black text-white py-12 mt-16"><div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 text-sm"><div><h3 class="font-bold mb-3">ZAYROSTORE</h3><p class="text-gray-400">Wear The Future.</p></div><div><h3 class="font-bold mb-3">Shop</h3><ul class="space-y-2 text-gray-400"><li><a href="#shop">All</a></li></ul></div><div><h3 class="font-bold mb-3">Support</h3><ul class="space-y-2 text-gray-400"><li><a href="#contact">Contact</a></li><li><a href="#faq">FAQ</a></li></ul></div><div><h3 class="font-bold mb-3">Follow</h3><ul class="space-y-2 text-gray-400"><li>Instagram</li></ul></div></div></footer>
+<script>let qty=1;function tab(t){document.getElementById('desc').classList.toggle('hidden',t!=='desc');document.getElementById('rev').classList.toggle('hidden',t!=='rev');}</script>
+</section>
+
+<section id="cart">
+<header class="sticky top-0 z-40 bg-white border-b"><div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between"><button onclick="openMenu()" class="md:hidden">☰</button><a href="#home" class="font-black text-2xl">ZAYRO<span class="font-light">STORE</span></a><nav class="hidden md:flex gap-6 text-sm font-medium"><a href="#shop">Shop</a><a href="#shop">New Arrivals</a><a href="#shop">Men</a><a href="#shop">Women</a><a href="#about">About</a></nav><div class="flex items-center gap-4"><a href="#wishlist">♡<span id="wish-count" class="ml-1 text-xs">0</span></a><a href="#cart">🛒<span id="cart-count" class="ml-1 text-xs">0</span></a><a href="#account">👤</a></div></div></header>
+<div id="menu-overlay" class="hidden fixed inset-0 bg-black/50 z-50" onclick="closeMenu()"></div>
+<aside id="mobile-menu" class="fixed top-0 left-0 h-full w-80 bg-white z-50 -translate-x-full transition-transform duration-300 overflow-y-auto"><div class="p-4 flex justify-between items-center border-b"><span class="font-black text-xl">ZAYRO<span class="font-light">STORE</span></span><button onclick="closeMenu()">✕</button></div><nav class="flex flex-col p-4 gap-3 text-sm"><a href="#shop">Shop</a><a href="#home">Home</a><a href="#account">My Account</a><a href="#cart">Cart</a><a href="#wishlist">Wishlist</a><a href="#about">About</a><a href="#contact">Contact</a><a href="#faq">FAQ</a></nav><div class="sticky bottom-0 p-4 bg-white border-t"><a href="https://wa.me/1234567890" class="block text-center bg-green-500 text-white py-2 rounded">WhatsApp</a></div></aside>
+<main class="max-w-7xl mx-auto px-4 py-8 grid md:grid-cols-3 gap-8">
+<div class="md:col-span-2" id="cartItems"></div>
+<div class="border rounded p-6">
+  <h2 class="font-bold mb-4">Order Summary</h2>
+  <div class="flex justify-between mb-2"><span>Subtotal</span><span id="sub">$0</span></div>
+  <div class="flex justify-between mb-2"><span>Shipping</span><span>$10</span></div>
+  <div class="mb-4"><input id="coupon" class="border px-3 py-2 w-full" placeholder="Coupon code"><button onclick="applyCoupon()" class="mt-2 w-full border py-2">Apply</button></div>
+  <div class="flex justify-between font-bold text-lg border-t pt-4"><span>Total</span><span id="total">$0</span></div>
+  <a href="#checkout" class="block text-center bg-black text-[#D4FF00] py-3 mt-4 font-bold">Checkout</a>
+</div>
+</main>
+<footer class="bg-black text-white py-12 mt-16"><div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 text-sm"><div><h3 class="font-bold mb-3">ZAYROSTORE</h3><p class="text-gray-400">Wear The Future.</p></div><div><h3 class="font-bold mb-3">Shop</h3><ul class="space-y-2 text-gray-400"><li><a href="#shop">All</a></li></ul></div><div><h3 class="font-bold mb-3">Support</h3><ul class="space-y-2 text-gray-400"><li><a href="#contact">Contact</a></li><li><a href="#faq">FAQ</a></li></ul></div><div><h3 class="font-bold mb-3">Follow</h3><ul class="space-y-2 text-gray-400"><li>Instagram</li></ul></div></div></footer>
+<script>
+let discount=0;
+function renderCart(){
+  const cart=getCart();
+  const el=document.getElementById('cartItems');
+  if(!cart.length){el.innerHTML='<p>Your cart is empty.</p>';calc();return;}
+  el.innerHTML=cart.map(c=>`<div class="flex items-center gap-4 border-b py-4"><img src="${c.img}" class="w-20 h-20 object-cover rounded"><div class="flex-1"><h3 class="font-semibold">${c.name}</h3><p>$${c.price}</p></div><div class="flex items-center gap-2"><button onclick="changeQty(${c.id},-1)" class="border px-2">-</button><span>${c.qty}</span><button onclick="changeQty(${c.id},1)" class="border px-2">+</button></div><button onclick="removeFromCart(${c.id});renderCart()" class="text-red-500">Remove</button></div>`).join('');
+  calc();
+}
+function changeQty(id,d){const cart=getCart();const i=cart.findIndex(x=>x.id===id);if(i>-1){cart[i].qty=Math.max(1,cart[i].qty+d);saveCart(cart);renderCart();}}
+function calc(){const sub=getCart().reduce((s,x)=>s+x.price*x.qty,0);const total=sub+10-discount;document.getElementById('sub').textContent='$'+sub;document.getElementById('total').textContent='$'+total;}
+function applyCoupon(){if(document.getElementById('coupon').value==='ZAYRO10'){discount=getCart().reduce((s,x)=>s+x.price*x.qty,0)*0.1;calc();alert('10% off applied');}else alert('Invalid coupon');}
+renderCart();
+</script>
+</section>
+
+<section id="checkout">
+<header class="sticky top-0 z-40 bg-white border-b"><div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between"><a href="#home" class="font-black text-2xl">ZAYRO<span class="font-light">STORE</span></a></div></header>
+<main class="max-w-7xl mx-auto px-4 py-8 grid md:grid-cols-2 gap-8">
+<form id="shipForm" class="space-y-4" onsubmit="event.preventDefault(); if(validate()){location.href='#success';}">
+  <h2 class="text-2xl font-bold">Shipping</h2>
+  <input id="name" class="border w-full px-3 py-2 rounded" placeholder="Full Name">
+  <input id="phone" class="border w-full px-3 py-2 rounded" placeholder="Phone">
+  <input id="address" class="border w-full px-3 py-2 rounded" placeholder="Address">
+  <input id="city" class="border w-full px-3 py-2 rounded" placeholder="City">
+  <div class="flex gap-4"><label><input type="radio" name="pay" checked> COD</label><label><input type="radio" name="pay"> Card</label></div>
+  <button class="w-full bg-black text-[#D4FF00] py-3 font-bold">Place Order</button>
+</form>
+<div class="border rounded p-6 h-fit sticky top-20">
+  <h2 class="font-bold mb-4">Summary</h2>
+  <p id="sumItems"></p>
+  <p class="font-bold mt-4" id="sumTotal"></p>
+</div>
+</main>
+<script>
+function validate(){const n=document.getElementById('name').value.trim();const p=document.getElementById('phone').value.trim();const a=document.getElementById('address').value.trim();const c=document.getElementById('city').value.trim();if(!n||!p||!a||!c){alert('Fill all fields');return false;}return true;}
+const cart=getCart();document.getElementById('sumItems').textContent=cart.length+' items';document.getElementById('sumTotal').textContent='Total: $'+(cart.reduce((s,x)=>s+x.price*x.qty,0)+10);
+</script>
+</section>
+
+<section id="success" class="bg-white text-black flex items-center justify-center min-h-screen text-center">
+<div><div class="text-7xl mb-4 animate-[pop_0.5s_ease-out]">✓</div><h1 class="text-3xl font-bold mb-2">Order Placed!</h1><p class="text-gray-600 mb-2">Order ID: ZAY-' + Math.floor(Math.random()*90000+10000) + '</p><a href="#home" class="inline-block bg-black text-[#D4FF00] px-8 py-3 font-bold mt-6">Continue Shopping</a></div>
+<script>localStorage.removeItem('zayro_cart');</script>
+</section>
+
+<section id="account">
+<header class="sticky top-0 z-40 bg-white border-b"><div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between"><a href="#home" class="font-black text-2xl">ZAYRO<span class="font-light">STORE</span></a></div></header>
+<main class="max-w-4xl mx-auto px-4 py-16">
+  <div class="flex gap-4 mb-6"><button onclick="showTab('login')" class="font-bold border-b-2 border-black">Login</button><button onclick="showTab('reg')" class="font-bold text-gray-400">Register</button></div>
+  <div id="login"><form class="space-y-4 max-w-md"><input class="border w-full px-3 py-2 rounded" placeholder="Email"><input type="password" class="border w-full px-3 py-2 rounded" placeholder="Password"><button class="bg-black text-[#D4FF00] px-6 py-3 font-bold">Login</button></form></div>
+  <div id="reg" class="hidden"><form class="space-y-4 max-w-md"><input class="border w-full px-3 py-2 rounded" placeholder="Name"><input class="border w-full px-3 py-2 rounded" placeholder="Email"><input type="password" class="border w-full px-3 py-2 rounded" placeholder="Password"><button class="bg-black text-[#D4FF00] px-6 py-3 font-bold">Register</button></form></div>
+  <h2 class="text-2xl font-bold mt-12 mb-4">Order History</h2>
+  <table class="w-full border"><thead><tr class="bg-gray-100"><th class="p-2 text-left">Order</th><th class="p-2 text-left">Date</th><th class="p-2 text-left">Total</th><th class="p-2 text-left">Status</th></tr></thead><tbody><tr><td class="p-2">#1001</td><td class="p-2">2026-10-01</td><td class="p-2">$99</td><td class="p-2">Delivered</td></tr><tr><td class="p-2">#1002</td><td class="p-2">2026-10-15</td><td class="p-2">$189</td><td class="p-2">Shipped</td></tr></tbody></table>
+</main>
+<script>function showTab(t){document.getElementById('login').classList.toggle('hidden',t!=='login');document.getElementById('reg').classList.toggle('hidden',t!=='reg');}</script>
+</section>
+
+<section id="wishlist">
+<header class="sticky top-0 z-40 bg-white border-b"><div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between"><a href="#home" class="font-black text-2xl">ZAYRO<span class="font-light">STORE</span></a></div></header>
+<main class="max-w-7xl mx-auto px-4 py-8"><h1 class="text-2xl font-bold mb-6">Wishlist</h1><div id="wishItems" class="grid grid-cols-2 md:grid-cols-4 gap-6"></div></main>
+<script>
+function renderWish(){const w=getWish();const el=document.getElementById('wishItems');if(!w.length){el.innerHTML='<p>Empty wishlist.</p>';return;}el.innerHTML=w.map(x=>`<div class="group"><img src="${x.img}" class="w-full h-64 object-cover rounded mb-3"><h3 class="font-semibold">${x.name}</h3><p class="text-gray-600">$${x.price}</p><button onclick="moveWishToCart(${x.id});renderWish();updateCounts()" class="mt-2 w-full border border-black py-2 hover:bg-black hover:text-white transition">Move to Cart</button><button onclick="removeFromWish(${x.id});renderWish();updateCounts()" class="mt-2 w-full text-red-500">Remove</button></div>`).join('');}
+renderWish();
+</script>
+</section>
+
+<section id="about">
+<header class="sticky top-0 z-40 bg-white border-b"><div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between"><a href="#home" class="font-black text-2xl">ZAYRO<span class="font-light">STORE</span></a><nav class="hidden md:flex gap-6 text-sm font-medium"><a href="#shop">Shop</a><a href="#about">About</a></nav><div class="flex items-center gap-4"><a href="#wishlist">♡<span id="wish-count" class="ml-1 text-xs">0</span></a><a href="#cart">🛒<span id="cart-count" class="ml-1 text-xs">0</span></a><a href="#account">👤</a></div></div></header>
+<main class="max-w-7xl mx-auto px-4 py-16">
+  <div class="grid md:grid-cols-2 gap-10 items-center mb-16"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800" class="rounded"><div><h1 class="text-4xl font-bold mb-4">Our Story</h1><p class="text-gray-600">ZAYROSTORE was born to redefine modern essentials. Premium noir, future-forward.</p></div></div>
+  <div class="grid grid-cols-3 gap-6 text-center mb-16"><div><p class="text-4xl font-bold">10K+</p><p class="text-gray-500">Customers</p></div><div><p class="text-4xl font-bold">50+</p><p class="text-gray-500">Products</p></div><div><p class="text-4xl font-bold">5</p><p class="text-gray-500">Years</p></div></div>
+  <h2 class="text-2xl font-bold mb-6">Team</h2>
+  <div class="grid md:grid-cols-3 gap-6"><div class="text-center"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300" class="rounded-full w-32 h-32 mx-auto mb-3 object-cover"><p class="font-semibold">Alex Noir</p><p class="text-gray-500 text-sm">Founder</p></div><div class="text-center"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300" class="rounded-full w-32 h-32 mx-auto mb-3 object-cover"><p class="font-semibold">Mia Future</p><p class="text-gray-500 text-sm">Design</p></div><div class="text-center"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300" class="rounded-full w-32 h-32 mx-auto mb-3 object-cover"><p class="font-semibold">Leo Wear</p><p class="text-gray-500 text-sm">Ops</p></div></div>
+</main>
+</section>
+
+<section id="contact">
+<header class="sticky top-0 z-40 bg-white border-b"><div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between"><a href="#home" class="font-black text-2xl">ZAYRO<span class="font-light">STORE</span></a></div></header>
+<main class="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-10">
+<form onsubmit="event.preventDefault();const n=document.getElementById('cn').value.trim();const e=document.getElementById('ce').value.trim();const m=document.getElementById('cm').value.trim();if(!n||!e||!m){alert('Fill all');return;}alert('Sent!');" class="space-y-4">
+  <h2 class="text-2xl font-bold">Contact Us</h2>
+  <input id="cn" class="border w-full px-3 py-2 rounded" placeholder="Name">
+  <input id="ce" class="border w-full px-3 py-2 rounded" placeholder="Email">
+  <textarea id="cm" class="border w-full px-3 py-2 rounded" rows="5" placeholder="Message"></textarea>
+  <button class="bg-black text-[#D4FF00] px-6 py-3 font-bold">Send</button>
+</form>
+<div class="space-y-4">
+  <p>Email: hello@zayrostore.com</p>
+  <p>Phone: +1 234 567 890</p>
+  <a href="https://wa.me/1234567890" class="inline-block bg-green-500 text-white px-4 py-2 rounded">WhatsApp</a>
+  <iframe src="https://maps.google.com/maps?q=new+york&t=&z=13&ie=UTF8&iwloc=&output=embed" class="w-full h-64 rounded border"></iframe>
+</div>
+</main>
+</section>
+
+<section id="faq">
+<header class="sticky top-0 z-40 bg-white border-b"><div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between"><a href="#home" class="font-black text-2xl">ZAYRO<span class="font-light">STORE</span></a></div></header>
+<main class="max-w-3xl mx-auto px-4 py-16">
+<h1 class="text-3xl font-bold mb-8">FAQ</h1>
+<div class="space-y-4">
+  <div class="border rounded"><button onclick="this.nextElementSibling.classList.toggle('hidden')" class="w-full text-left px-4 py-3 font-semibold">What is shipping time?</button><div class="hidden px-4 pb-3 text-gray-600">3-5 business days.</div></div>
+  <div class="border rounded"><button onclick="this.nextElementSibling.classList.toggle('hidden')" class="w-full text-left px-4 py-3 font-semibold">Return policy?</button><div class="hidden px-4 pb-3 text-gray-600">30-day returns.</div></div>
+  <div class="border rounded"><button onclick="this.nextElementSibling.classList.toggle('hidden')" class="w-full text-left px-4 py-3 font-semibold">Payment methods?</button><div class="hidden px-4 pb-3 text-gray-600">COD and Card.</div></div>
+</div>
+</main>
+</section>
+
 <script src="app.js"></script>
 <script>
 const products = [

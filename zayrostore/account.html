@@ -1,0 +1,12 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Account - ZAYROSTORE</title><script src="https://cdn.tailwindcss.com"></script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"><style>body{font-family:'Inter',sans-serif;}</style></head><body class="bg-white text-black">
+<header class="sticky top-0 z-40 bg-white border-b"><div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between"><a href="index.html" class="font-black text-2xl">ZAYRO<span class="font-light">STORE</span></a></div></header>
+<main class="max-w-4xl mx-auto px-4 py-16">
+  <div class="flex gap-4 mb-6"><button onclick="showTab('login')" class="font-bold border-b-2 border-black">Login</button><button onclick="showTab('reg')" class="font-bold text-gray-400">Register</button></div>
+  <div id="login"><form class="space-y-4 max-w-md"><input class="border w-full px-3 py-2 rounded" placeholder="Email"><input type="password" class="border w-full px-3 py-2 rounded" placeholder="Password"><button class="bg-black text-[#D4FF00] px-6 py-3 font-bold">Login</button></form></div>
+  <div id="reg" class="hidden"><form class="space-y-4 max-w-md"><input class="border w-full px-3 py-2 rounded" placeholder="Name"><input class="border w-full px-3 py-2 rounded" placeholder="Email"><input type="password" class="border w-full px-3 py-2 rounded" placeholder="Password"><button class="bg-black text-[#D4FF00] px-6 py-3 font-bold">Register</button></form></div>
+  <h2 class="text-2xl font-bold mt-12 mb-4">Order History</h2>
+  <table class="w-full border"><thead><tr class="bg-gray-100"><th class="p-2 text-left">Order</th><th class="p-2 text-left">Date</th><th class="p-2 text-left">Total</th><th class="p-2 text-left">Status</th></tr></thead><tbody><tr><td class="p-2">#1001</td><td class="p-2">2026-10-01</td><td class="p-2">$99</td><td class="p-2">Delivered</td></tr><tr><td class="p-2">#1002</td><td class="p-2">2026-10-15</td><td class="p-2">$189</td><td class="p-2">Shipped</td></tr></tbody></table>
+</main>
+<script src="app.js"></script>
+<script>function showTab(t){document.getElementById('login').classList.toggle('hidden',t!=='login');document.getElementById('reg').classList.toggle('hidden',t!=='reg');}</script>
+</body></html>

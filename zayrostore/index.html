@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZAYROSTORE - Wear The Future</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>body{font-family:'Inter',sans-serif;}</style>
+</head>
+<body class="bg-white text-black">
+<header class="sticky top-0 z-40 bg-white border-b">
+  <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+    <button onclick="openMenu()" class="md:hidden">☰</button>
+    <a href="index.html" class="font-black text-2xl tracking-tight">ZAYRO<span class="font-light">STORE</span></a>
+    <nav class="hidden md:flex gap-6 text-sm font-medium">
+      <a href="shop.html">Shop</a><a href="shop.html?cat=new">New Arrivals</a><a href="shop.html?cat=men">Men</a><a href="shop.html?cat=women">Women</a><a href="about.html">About</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="wishlist.html">♡<span id="wish-count" class="ml-1 text-xs">0</span></a>
+      <a href="cart.html">🛒<span id="cart-count" class="ml-1 text-xs">0</span></a>
+      <a href="account.html">👤</a>
+    </div>
+  </div>
+</header>
+<div id="menu-overlay" class="hidden fixed inset-0 bg-black/50 z-50" onclick="closeMenu()"></div>
+<aside id="mobile-menu" class="fixed top-0 left-0 h-full w-80 bg-white z-50 -translate-x-full transition-transform duration-300 overflow-y-auto">
+  <div class="p-4 flex justify-between items-center border-b"><span class="font-black text-xl">ZAYRO<span class="font-light">STORE</span></span><button onclick="closeMenu()">✕</button></div>
+  <div class="p-4"><input class="w-full border rounded px-3 py-2" placeholder="Search..."></div>
+  <nav class="flex flex-col p-4 gap-3 text-sm">
+    <a href="shop.html">Shop</a><a href="shop.html?cat=new">New Arrivals</a><a href="shop.html?cat=men">Men</a><a href="shop.html?cat=women">Women</a><a href="account.html">My Account</a><a href="cart.html">Cart</a><a href="wishlist.html">Wishlist</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="faq.html">FAQ</a>
+  </nav>
+  <div class="sticky bottom-0 p-4 bg-white border-t"><a href="https://wa.me/1234567890" class="block text-center bg-green-500 text-white py-2 rounded">WhatsApp</a></div>
+</aside>
+
+<main>
+<section class="bg-[#F5F5F7] py-24 text-center">
+  <h1 class="text-5xl md:text-7xl font-black mb-4">Wear The Future</h1>
+  <p class="text-gray-600 mb-8">Premium noir essentials for the modern wardrobe.</p>
+  <a href="shop.html" class="inline-block bg-black text-[#D4FF00] px-8 py-3 font-bold rounded">Shop Now</a>
+</section>
+<section class="max-w-7xl mx-auto px-4 py-16">
+  <h2 class="text-2xl font-bold mb-8">Featured Categories</h2>
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="relative overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600" class="w-full h-64 object-cover"><div class="absolute inset-0 flex items-end p-4 text-white font-bold bg-gradient-to-t from-black/60">Men</div></div>
+    <div class="relative overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600" class="w-full h-64 object-cover"><div class="absolute inset-0 flex items-end p-4 text-white font-bold bg-gradient-to-t from-black/60">Women</div></div>
+    <div class="relative overflow-hidden rounded"><img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=600" class="w-full h-64 object-cover"><div class="absolute inset-0 flex items-end p-4 text-white font-bold bg-gradient-to-t from-black/60">New Arrivals</div></div>
+  </div>
+</section>
+<section class="max-w-7xl mx-auto px-4 py-16">
+  <h2 class="text-2xl font-bold mb-8">Best Sellers</h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6" id="bestsellers"></div>
+</section>
+<section class="bg-black text-white py-16 text-center">
+  <h2 class="text-3xl font-bold mb-4">Join the Movement</h2>
+  <form class="flex justify-center gap-2 max-w-md mx-auto" onsubmit="event.preventDefault(); alert('Subscribed!');">
+    <input class="flex-1 px-4 py-2 text-black rounded" placeholder="Your email">
+    <button class="bg-[#D4FF00] text-black px-6 py-2 font-bold rounded">Subscribe</button>
+  </form>
+</section>
+</main>
+
+<footer class="bg-black text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 text-sm">
+    <div><h3 class="font-bold mb-3">ZAYROSTORE</h3><p class="text-gray-400">Wear The Future.</p></div>
+    <div><h3 class="font-bold mb-3">Shop</h3><ul class="space-y-2 text-gray-400"><li><a href="shop.html">All</a></li><li><a href="shop.html?cat=men">Men</a></li><li><a href="shop.html?cat=women">Women</a></li></ul></div>
+    <div><h3 class="font-bold mb-3">Support</h3><ul class="space-y-2 text-gray-400"><li><a href="contact.html">Contact</a></li><li><a href="faq.html">FAQ</a></li><li><a href="about.html">About</a></li></ul></div>
+    <div><h3 class="font-bold mb-3">Follow</h3><ul class="space-y-2 text-gray-400"><li>Instagram</li><li>Twitter</li><li>TikTok</li></ul></div>
+  </div>
+</footer>
+<script src="app.js"></script>
+<script>
+const products = [
+ {id:1,name:'Noir Hoodie',price:89,img:'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400'},
+ {id:2,name:'Future Tee',price:45,img:'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400'},
+ {id:3,name:'Stealth Jacket',price:199,img:'https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400'},
+ {id:4,name:'Cargo Pants',price:120,img:'https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=400'},
+ {id:5,name:'Knit Sweater',price:95,img:'https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400'},
+ {id:6,name:'Denim Jacket',price:140,img:'https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=400'},
+ {id:7,name:'Track Pants',price:75,img:'https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400'},
+ {id:8,name:'Oversized Shirt',price:65,img:'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400'},
+];
+const bs = document.getElementById('bestsellers');
+bs.innerHTML = products.map(p=>`
+<div class="group">
+  <img src="${p.img}" class="w-full h-64 object-cover rounded mb-3 group-hover:scale-105 transition">
+  <h3 class="font-semibold">${p.name}</h3>
+  <p class="text-gray-600">$${p.price}</p>
+  <button onclick='addToCart({id:${p.id},name:"${p.name}",price:${p.price},img:"${p.img}"})' class="mt-2 w-full border border-black py-2 hover:bg-black hover:text-white transition">Add to Cart</button>
+</div>`).join('');
+</script>
+</body>
+</html>

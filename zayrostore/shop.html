@@ -1,0 +1,30 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Shop - ZAYROSTORE</title><script src="https://cdn.tailwindcss.com"></script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"><style>body{font-family:'Inter',sans-serif;}</style></head><body class="bg-white text-black">
+<header class="sticky top-0 z-40 bg-white border-b"><div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between"><button onclick="openMenu()" class="md:hidden">☰</button><a href="index.html" class="font-black text-2xl">ZAYRO<span class="font-light">STORE</span></a><nav class="hidden md:flex gap-6 text-sm font-medium"><a href="shop.html">Shop</a><a href="shop.html">New Arrivals</a><a href="shop.html">Men</a><a href="shop.html">Women</a><a href="about.html">About</a></nav><div class="flex items-center gap-4"><a href="wishlist.html">♡<span id="wish-count" class="ml-1 text-xs">0</span></a><a href="cart.html">🛒<span id="cart-count" class="ml-1 text-xs">0</span></a><a href="account.html">👤</a></div></div></header>
+<div id="menu-overlay" class="hidden fixed inset-0 bg-black/50 z-50" onclick="closeMenu()"></div>
+<aside id="mobile-menu" class="fixed top-0 left-0 h-full w-80 bg-white z-50 -translate-x-full transition-transform duration-300 overflow-y-auto"><div class="p-4 flex justify-between items-center border-b"><span class="font-black text-xl">ZAYRO<span class="font-light">STORE</span></span><button onclick="closeMenu()">✕</button></div><div class="p-4"><input class="w-full border rounded px-3 py-2" placeholder="Search..."></div><nav class="flex flex-col p-4 gap-3 text-sm"><a href="shop.html">Shop</a><a href="index.html">Home</a><a href="account.html">My Account</a><a href="cart.html">Cart</a><a href="wishlist.html">Wishlist</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="faq.html">FAQ</a></nav><div class="sticky bottom-0 p-4 bg-white border-t"><a href="https://wa.me/1234567890" class="block text-center bg-green-500 text-white py-2 rounded">WhatsApp</a></div></aside>
+<main class="max-w-7xl mx-auto px-4 py-8 grid md:grid-cols-4 gap-8">
+<aside class="md:sticky md:top-20 self-start space-y-6">
+  <div><h3 class="font-bold mb-2">Price</h3><input type="range" min="0" max="200" class="w-full"></div>
+  <div><h3 class="font-bold mb-2">Category</h3><label class="block"><input type="checkbox"> Men</label><label class="block"><input type="checkbox"> Women</label><label class="block"><input type="checkbox"> New</label></div>
+  <div><h3 class="font-bold mb-2">Color</h3><div class="flex gap-2"><span class="w-6 h-6 rounded-full bg-black"></span><span class="w-6 h-6 rounded-full bg-white border"></span><span class="w-6 h-6 rounded-full bg-gray-500"></span></div></div>
+  <div><h3 class="font-bold mb-2">Size</h3><div class="flex gap-2 flex-wrap"><button class="border px-2 py-1">S</button><button class="border px-2 py-1">M</button><button class="border px-2 py-1">L</button><button class="border px-2 py-1">XL</button></div></div>
+</aside>
+<section class="md:col-span-3">
+  <div class="flex justify-between items-center mb-6"><h1 class="text-2xl font-bold">Shop</h1><select id="sort" class="border px-3 py-2 rounded"><option>Sort by</option><option>Price Low-High</option><option>Price High-Low</option></select></div>
+  <div id="grid" class="grid grid-cols-2 md:grid-cols-3 gap-6"></div>
+</section>
+</main>
+<footer class="bg-black text-white py-12 mt-16"><div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8 text-sm"><div><h3 class="font-bold mb-3">ZAYROSTORE</h3><p class="text-gray-400">Wear The Future.</p></div><div><h3 class="font-bold mb-3">Shop</h3><ul class="space-y-2 text-gray-400"><li><a href="shop.html">All</a></li></ul></div><div><h3 class="font-bold mb-3">Support</h3><ul class="space-y-2 text-gray-400"><li><a href="contact.html">Contact</a></li><li><a href="faq.html">FAQ</a></li></ul></div><div><h3 class="font-bold mb-3">Follow</h3><ul class="space-y-2 text-gray-400"><li>Instagram</li></ul></div></div></footer>
+<script src="app.js"></script>
+<script>
+const prods = Array.from({length:12},(_,i)=>({id:100+i,name:'Product '+(i+1),price:40+i*15,img:'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&q='+(i)}));
+const grid=document.getElementById('grid');
+function render(list){grid.innerHTML=list.map(p=>`<div class="group"><img src="${p.img}" class="w-full h-64 object-cover rounded mb-3"><h3 class="font-semibold">${p.name}</h3><p class="text-gray-600">$${p.price}</p><button onclick='addToCart({id:${p.id},name:"${p.name}",price:${p.price},img:"${p.img}"})' class="mt-2 w-full border border-black py-2 hover:bg-black hover:text-white transition">Add to Cart</button></div>`).join('');}
+render(prods);
+document.getElementById('sort').addEventListener('change',e=>{
+  let s=[...prods];
+  if(e.target.value==='Price Low-High') s.sort((a,b)=>a.price-b.price);
+  if(e.target.value==='Price High-Low') s.sort((a,b)=>b.price-a.price);
+  render(s);
+});
+</script></body></html>

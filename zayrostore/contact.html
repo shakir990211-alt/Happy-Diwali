@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Contact - ZAYROSTORE</title><script src="https://cdn.tailwindcss.com"></script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"><style>body{font-family:'Inter',sans-serif;}</style></head><body class="bg-white text-black">
+<header class="sticky top-0 z-40 bg-white border-b"><div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between"><a href="index.html" class="font-black text-2xl">ZAYRO<span class="font-light">STORE</span></a></div></header>
+<main class="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-10">
+<form onsubmit="event.preventDefault();const n=document.getElementById('cn').value.trim();const e=document.getElementById('ce').value.trim();const m=document.getElementById('cm').value.trim();if(!n||!e||!m){alert('Fill all');return;}alert('Sent!');" class="space-y-4">
+  <h2 class="text-2xl font-bold">Contact Us</h2>
+  <input id="cn" class="border w-full px-3 py-2 rounded" placeholder="Name">
+  <input id="ce" class="border w-full px-3 py-2 rounded" placeholder="Email">
+  <textarea id="cm" class="border w-full px-3 py-2 rounded" rows="5" placeholder="Message"></textarea>
+  <button class="bg-black text-[#D4FF00] px-6 py-3 font-bold">Send</button>
+</form>
+<div class="space-y-4">
+  <p>Email: hello@zayrostore.com</p>
+  <p>Phone: +1 234 567 890</p>
+  <a href="https://wa.me/1234567890" class="inline-block bg-green-500 text-white px-4 py-2 rounded">WhatsApp</a>
+  <iframe src="https://maps.google.com/maps?q=new+york&t=&z=13&ie=UTF8&iwloc=&output=embed" class="w-full h-64 rounded border"></iframe>
+</div>
+</main>
+<script src="app.js"></script></body></html>

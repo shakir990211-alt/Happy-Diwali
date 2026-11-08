@@ -1,8 +1,0 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Wishlist - ZAYROSTORE</title><script src="https://cdn.tailwindcss.com"></script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"><style>body{font-family:'Inter',sans-serif;}</style></head><body class="bg-white text-black">
-<header class="sticky top-0 z-40 bg-white border-b"><div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between"><a href="index.html" class="font-black text-2xl">ZAYRO<span class="font-light">STORE</span></a></div></header>
-<main class="max-w-7xl mx-auto px-4 py-8"><h1 class="text-2xl font-bold mb-6">Wishlist</h1><div id="wishItems" class="grid grid-cols-2 md:grid-cols-4 gap-6"></div></main>
-<script src="app.js"></script>
-<script>
-function renderWish(){const w=getWish();const el=document.getElementById('wishItems');if(!w.length){el.innerHTML='<p>Empty wishlist.</p>';return;}el.innerHTML=w.map(x=>`<div class="group"><img src="${x.img}" class="w-full h-64 object-cover rounded mb-3"><h3 class="font-semibold">${x.name}</h3><p class="text-gray-600">$${x.price}</p><button onclick="moveWishToCart(${x.id});renderWish();updateCounts()" class="mt-2 w-full border border-black py-2 hover:bg-black hover:text-white transition">Move to Cart</button><button onclick="removeFromWish(${x.id});renderWish();updateCounts()" class="mt-2 w-full text-red-500">Remove</button></div>`).join('');}
-renderWish();
-</script></body></html>

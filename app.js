@@ -25,39 +25,33 @@ function moveWishToCart(id) {
   if (item) { addToCart(item); removeFromWish(id); }
 }
 function updateCartCount() {
-  const el = document.getElementById('cart-count');
-  if (el) el.textContent = getCart().reduce((s,x)=>s+x.qty,0);
+  document.querySelectorAll('#cart-count').forEach(el => el.textContent = getCart().reduce((s,x)=>s+x.qty,0));
 }
 function updateWishCount() {
-  const el = document.getElementById('wish-count');
-  if (el) el.textContent = getWish().length;
+  document.querySelectorAll('#wish-count').forEach(el => el.textContent = getWish().length);
 }
 function updateCounts() { updateCartCount(); updateWishCount(); }
-
-function toggleMenu() {
-  const menu = document.getElementById('mobile-menu');
-  const overlay = document.getElementById('menu-overlay');
-  if (!menu) return;
-  menu.classList.toggle('-translate-x-full');
-  menu.classList.toggle('translate-x-0');
-  overlay.classList.toggle('hidden');
-}
 
 function openMenu() {
   const menu = document.getElementById('mobile-menu');
   const overlay = document.getElementById('menu-overlay');
   if (!menu) return;
-  menu.classList.remove('-translate-x-full'); menu.classList.add('translate-x-0');
+  menu.classList.remove('-translate-x-full');
+  menu.classList.add('translate-x-0');
   overlay.classList.remove('hidden');
+  document.body.style.overflow = 'hidden';
 }
 function closeMenu() {
   const menu = document.getElementById('mobile-menu');
   const overlay = document.getElementById('menu-overlay');
   if (!menu) return;
-  menu.classList.add('-translate-x-full'); menu.classList.remove('translate-x-0');
+  menu.classList.add('-translate-x-full');
+  menu.classList.remove('translate-x-0');
   overlay.classList.add('hidden');
+  document.body.style.overflow = '';
 }
-
-function commonInit() { updateCounts(); }
-
-document.addEventListener('DOMContentLoaded', commonInit);
+function toggleMenu() {
+  const menu = document.getElementById('mobile-menu');
+  if (!menu) return;
+  if (menu.classList.contains('-translate-x-full')) openMenu(); else closeMenu();
+}
